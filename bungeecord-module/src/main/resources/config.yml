@@ -1,0 +1,16 @@
+#
+#  ░████████   ░██                       ░██       ░████████                         ░███     ░███   ░██████
+#  ░██    ░██  ░██                       ░██       ░██    ░██                        ░████   ░████  ░██   ░██
+#  ░██    ░██  ░██  ░██████    ░███████  ░██    ░██░██    ░██   ░███████  ░██    ░██ ░██░██ ░██░██ ░██
+#  ░████████   ░██       ░██  ░██    ░██ ░██   ░██ ░████████   ░██    ░██  ░██  ░██  ░██ ░████ ░██ ░██
+#  ░██     ░██ ░██  ░███████  ░██        ░███████  ░██     ░██ ░██    ░██   ░█████   ░██  ░██  ░██ ░██
+#  ░██     ░██ ░██ ░██   ░██  ░██    ░██ ░██   ░██ ░██     ░██ ░██    ░██  ░██  ░██  ░██       ░██  ░██   ░██
+#  ░█████████  ░██  ░█████░██  ░███████  ░██    ░██░█████████   ░███████  ░██    ░██ ░██       ░██   ░██████
+#
+#  Configurazione BlackBoxMC versione v1.0b1rc per BungeeCord
+#  Sviluppato da StrayVibes per BlackBoxMC https://blackboxmc.it
+---
+api-key: "INSERISCI_LA_TUA_CHIAVE_API_QUI"
+server-name: "Nome Del Tuo Server"
+founder-name: "Nome Del Fondatore"
+server-icon-url: "https://i.imgur.com/o2LhJRF.png"

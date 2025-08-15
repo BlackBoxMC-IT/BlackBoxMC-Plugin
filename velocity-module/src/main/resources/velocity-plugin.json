@@ -1,0 +1,10 @@
+{
+  "id": "blackboxmc",
+  "name": "BlackBoxMC Plugin",
+  "version": "v1.0b1rc",
+  "authors": [
+    "StrayVibes"
+  ],
+  "description": "Plugin per la blacklist di BlackBoxMC.",
+  "url": "https://blackboxmc.it"
+}
