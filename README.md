@@ -1,5 +1,3 @@
-# BlackBoxMC
-
 <div align="center">
   <img src="https://i.imgur.com/o2LhJRF.png" alt="Logo di BlackBoxMC" width="200">
   <br>
