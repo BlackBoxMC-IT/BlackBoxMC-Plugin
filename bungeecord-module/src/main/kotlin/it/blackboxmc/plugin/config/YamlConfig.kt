@@ -5,13 +5,13 @@ import java.io.File
 import java.io.FileInputStream
 import kotlin.collections.get
 
-class YamlConfig(private val file: File) {
+class YamlConfig(file: File) {
 
     private val data: Map<String, Any> = try {
         FileInputStream(file).use { input ->
             Yaml().load(input) as Map<String, Any>
         }
-    } catch (e: Exception) {
+    } catch (_: Exception) {
         emptyMap()
     }
 

@@ -1,10 +1,9 @@
 @file:Suppress("PrivatePropertyName", "SpellCheckingInspection")
 
-package it.blackboxmc.plugin.listeners
+package it.blackboxmc.plugin.tasks
 
 import com.google.gson.JsonParser
-import com.velocitypowered.api.event.Subscribe
-import com.velocitypowered.api.event.connection.PostLoginEvent
+import com.velocitypowered.api.proxy.Player
 import com.velocitypowered.api.proxy.ProxyServer
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.format.NamedTextColor
@@ -14,13 +13,24 @@ import java.net.URI
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
 import java.net.http.HttpResponse
+import java.util.concurrent.TimeUnit
 
-class VelocityLoginListener(private val server: ProxyServer, private val logger: Logger) {
+class VelocityPeriodCheck(private val server: ProxyServer, private val logger: Logger) {
     private val API_URL = "https://blackboxmc.it"
 
-    @Subscribe
-    fun onPostLogin(event: PostLoginEvent) {
-        val player = event.player
+    fun startTask() {
+        server.scheduler.buildTask(this, Runnable {
+            checkOnlinePlayers()
+        }).repeat(1, TimeUnit.SECONDS).schedule()
+    }
+
+    private fun checkOnlinePlayers() {
+        for (player in server.allPlayers) {
+            checkAndKickPlayer(player)
+        }
+    }
+
+    private fun checkAndKickPlayer(player: Player) {
         server.scheduler.buildTask(this, Runnable {
             try {
                 val uuidWithoutDashes = player.uniqueId.toString().replace("-", "")

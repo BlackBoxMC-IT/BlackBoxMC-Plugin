@@ -2,4 +2,5 @@ name: BlackBoxMC
 main: it.blackboxmc.plugin.BungeeCordPlugin
 version: v1.0b1rc
 author: StrayVibes
+description: BlackBoxMC protegge il tuo server 24h.
 website: https://blackboxmc.it

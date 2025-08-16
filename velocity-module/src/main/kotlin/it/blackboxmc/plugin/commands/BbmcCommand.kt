@@ -1,3 +1,5 @@
+@file:Suppress("SpellCheckingInspection")
+
 package it.blackboxmc.plugin.commands
 
 import com.velocitypowered.api.command.SimpleCommand

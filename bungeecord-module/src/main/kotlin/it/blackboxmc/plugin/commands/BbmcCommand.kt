@@ -1,3 +1,5 @@
+@file:Suppress("SpellCheckingInspection")
+
 package it.blackboxmc.plugin.commands
 
 import net.md_5.bungee.api.ChatColor
