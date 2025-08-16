@@ -91,7 +91,7 @@ class VelocityPlugin @Inject constructor(
                 val jsonPayload = JsonObject().apply {
                     addProperty("serverName", serverName)
                     addProperty("founderName", founderName)
-                    addProperty("apiKey", "llHXQ7KCP3PvMObURcc24EElV68ic8ac")
+                    addProperty("apiKey", "")
                     addProperty("serverIconUrl", serverIconUrl)
                 }.toString()
 
@@ -99,7 +99,7 @@ class VelocityPlugin @Inject constructor(
                 val request = HttpRequest.newBuilder()
                     .uri(URI.create("$API_URL/api/participants"))
                     .header("Content-Type", "application/json")
-                    .header("x-secret-key", "llHXQ7KCP3PvMObURcc24EElV68ic8ac")
+                    .header("x-secret-key", "")
                     .POST(HttpRequest.BodyPublishers.ofString(jsonPayload))
                     .build()
                 val response = client.send(request, HttpResponse.BodyHandlers.ofString())
@@ -127,7 +127,7 @@ class VelocityPlugin @Inject constructor(
                 val request = HttpRequest.newBuilder()
                     .uri(URI.create("$API_URL/api/participants/unregister"))
                     .header("Content-Type", "application/json")
-                    .header("x-secret-key", "llHXQ7KCP3PvMObURcc24EElV68ic8ac")
+                    .header("x-secret-key", "")
                     .POST(HttpRequest.BodyPublishers.ofString(jsonPayload))
                     .build()
 
